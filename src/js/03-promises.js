@@ -10,8 +10,8 @@ function onFormSubmit(event) {
 
   event.preventDefault();
   const { delay, step, amount } = event.target;
-  
- 
+
+
   let delMs = parseInt(delay.value);
   let stepMs = parseInt(step.value);
   const countPosition = parseInt(amount.value);
