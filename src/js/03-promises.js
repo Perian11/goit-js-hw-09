@@ -24,7 +24,7 @@ function onFormSubmit(event) {
 
       return;
     }
-    createPromise(position, delay)
+    createPromise(position, delMs)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
