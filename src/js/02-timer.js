@@ -24,8 +24,10 @@ const options = {
     selectedDate = selectedDates[0];
     if (selectedDate.getTime() > options.defaultDate.getTime()) {
       startButtonEl.disabled = false;
+      dateInputEl.disabled = true;
     } else {
       startButtonEl.disabled = true;
+      
       Notiflix.Notify.failure('Please choose a date in the future');
     }
   },
