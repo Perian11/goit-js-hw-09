@@ -17,6 +17,11 @@ function onFormSubmit(event) {
   const countPosition = parseInt(amount.value);
   let position = 0;
 
+  if (stepMs < 0 || delMs < 0 || countPosition <= 0) {
+    Notify.failure('Invalid input values');
+    return;
+  }
+
   const timerId = setInterval(() => {
     position += 1;
     if (position > countPosition) {
